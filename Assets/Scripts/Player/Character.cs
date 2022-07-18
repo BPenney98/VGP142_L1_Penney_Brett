@@ -88,7 +88,7 @@ public class Character : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Fire();
-                throw new UnassignedReferenceException("Fire1 was not assigned" + name + "Revert back to default." + Input.GetButtonDown("Fire1"));
+                throw new UnassignedReferenceException(" Fire1 was not assigned " + name + " Revert back to default. " + Input.GetButtonDown("Fire1"));
             }
         }
         finally
@@ -109,11 +109,11 @@ void Fire()
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (hit.gameObject.tag == "Pickup")
+        if (collision.gameObject.tag == "Pickup")
         {
-            Destroy(hit.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }

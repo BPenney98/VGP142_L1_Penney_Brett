@@ -13,7 +13,7 @@ public class SpawnPickups : MonoBehaviour
         try
         {
             Instantiate(collectiblePrefabArray[Random.Range(0, 3)], transform.position, transform.rotation);
-            throw new UnassignedReferenceException("Objects not spawning." + name + "Not able to continue.");
+            throw new UnassignedReferenceException(" Objects not spawning. " + name + " Not able to continue. ");
         }
 
         finally
