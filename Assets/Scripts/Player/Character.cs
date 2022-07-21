@@ -116,4 +116,9 @@ void Fire()
             Destroy(collision.gameObject);
         }
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        
+    }
 }
